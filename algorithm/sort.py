@@ -116,9 +116,9 @@ if __name__ == "__main__":
     arr = [5,4,3,2,1,6,7,8,9,10]
 
     print("before", arr)
-    #bubbleSort(arr)
-    #selectionSort(arr)
-    #insertionSort(arr)
-    quickSort(arr)
-    #mergeSort(arr)
+    #arr = bubbleSort(arr)
+    #arr = selectionSort(arr)
+    #arr = insertionSort(arr)
+    #arr = quickSort(arr)
+    #arr = mergeSort(arr)
     print("after ", arr)
