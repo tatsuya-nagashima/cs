@@ -112,6 +112,57 @@ def merge(left, right):
 
     return merged
 
+def heapSort(arr):
+    i = 0
+    n = len(arr)
+
+    while(i < n):
+        # ヒープを構成
+        upheap(arr, i)
+        i += 1
+
+    while(i > 1):
+        # ヒープから最大値を取り出し
+        i -= 1
+        tmp = arr[0]
+        arr[0] = arr[i]
+        arr[i] = tmp
+
+        # ヒープの再構成
+        downheap(arr, i-1)
+
+    return arr
+
+# arr[n]をヒープ構成部(0～n-1)の最適な位置へ移動
+def upheap(arr, n):
+    while n != 0:
+        parent = int((n - 1) / 2)
+        if arr[n] > arr[parent]:
+            # 親より大きな値の場合親子の値を交換
+            tmp = arr[n]
+            arr[n] = arr[parent]
+            arr[parent] = tmp
+            n = parent
+        else:
+            break
+
+# ルート[0]をヒープ(0～n)の最適な位置へ移動
+def downheap(arr, n):
+    if n == 0: return
+    parent = 0
+    while True:
+        child = 2 * parent + 1 # arr[n]の子要素
+        if child > n: break
+        if (child < n) and arr[child] < arr[child + 1]:
+            child += 1
+        if arr[parent] < arr[child]: # 子要素より小さい場合スワップ
+            tmp = arr[child]
+            arr[child] = arr[parent]
+            arr[parent] = tmp
+            parent = child; # 交換後のインデックスを保持
+        else:
+            break
+
 if __name__ == "__main__":
     arr = [5,4,3,2,1,6,7,8,9,10]
 
@@ -121,4 +172,5 @@ if __name__ == "__main__":
     #arr = insertionSort(arr)
     #arr = quickSort(arr)
     #arr = mergeSort(arr)
+    arr = heapSort(arr)
     print("after ", arr)
