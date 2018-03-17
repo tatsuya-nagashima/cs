@@ -1,61 +1,59 @@
 # _*_coding: utf-8-*-
 
-def encrypt(plaintext, key):
-    ciphertext = ""
+def encrypt(plain_text, key):
+    cipher_text = ""
 
-    for i in range(len(plaintext)):
+    for i in range(len(plain_text)):
         #文字をkey文字ずらす
-        rot_ch = chr(ord(plaintext[i])+key)
+        rot_ch = chr(ord(plain_text[i])+key)
         if rot_ch <= 'z':
-            ciphertext += rot_ch
+            cipher_text += rot_ch
         #文字をずらすとzを超える場合
         else :
-            rot_ch = chr((ord(plaintext[i])-26+key))
-            ciphertext += rot_ch
+            rot_ch = chr((ord(plain_text[i])-26+key))
+            cipher_text += rot_ch
 
-    return ciphertext
+    return cipher_text
 
-def decrypt(ciphertext, key):
-    plaintext = ""
+def decrypt(cipher_text, key):
+    plain_text = ""
 
-    for i in range(len(ciphertext)):
-        rot_ch = chr(ord(ciphertext[i])-key)
+    for i in range(len(cipher_text)):
+        rot_ch = chr(ord(cipher_text[i])-key)
         if rot_ch >= 'a':
-            plaintext += rot_ch
+            plain_text += rot_ch
         #文字をずらすとaを超える場合
         else :
-            rot_ch = chr((ord(ciphertext[i])+26-key))
-            plaintext += rot_ch
+            rot_ch = chr((ord(cipher_text[i])+26-key))
+            plain_text += rot_ch
 
-    return plaintext
+    return plain_text
 
 #ブルートフォース攻撃
-def attack(ciphertext):
+def attack(cipher_text):
     for i in range(0,26):
-        plaintext = ""
-        for j in range(len(ciphertext)):
-            rot_ch = chr(ord(ciphertext[j])-i)
+        plain_text = ""
+        for j in range(len(cipher_text)):
+            rot_ch = chr(ord(cipher_text[j])-i)
             if rot_ch >= 'a':
-                plaintext += rot_ch
+                plain_text += rot_ch
                 #文字をずらすとaを超える場合
             else :
-                rot_ch = chr((ord(ciphertext[j])+26-i))
-                plaintext += rot_ch
-        print "rot %d:" % i, plaintext
+                rot_ch = chr((ord(cipher_text[j])+26-i))
+                plain_text += rot_ch
+        print "rot %d:" % i, plain_text
 
 if __name__ == '__main__':
-    print "PLEASE INPUT PLAINTEXT : ",
-    plaintext = raw_input()
+    print ("Please input plain_text :"),
+    plain_text = raw_input()
 
-    print "PLEASE INPUT KEY : ",
+    print ("Please input key :"),
     key = raw_input()
 
-    ciphertext = encrypt(plaintext, int(key))
-    print("CIPHERTEXT : " + ciphertext)
+    cipher_text = encrypt(plain_text, int(key))
+    plain_text = decrypt(cipher_text, int(key))
+    print ("Encrypt : " + cipher_text)
+    print ("Decrypt : " + plain_text)
 
-    plaintext = decrypt(ciphertext, int(key))
-    print("PLAINTEXT : " + plaintext)
-    
-    print ""
-    print("ATTACK!")
-    attack(ciphertext)
+    print ("\nAttack!")
+    attack(cipher_text)
