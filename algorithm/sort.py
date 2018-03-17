@@ -172,5 +172,5 @@ if __name__ == "__main__":
     #arr = insertionSort(arr)
     #arr = quickSort(arr)
     #arr = mergeSort(arr)
-    arr = heapSort(arr)
+    #arr = heapSort(arr)
     print("after ", arr)
