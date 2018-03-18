@@ -1,6 +1,6 @@
 #coding:utf-8
 from PIL import Image
-import numpy
+
 img = Image.open("sample.png")
 
 #RGBに変換
