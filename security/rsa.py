@@ -7,7 +7,7 @@ def encrypt(plain_text, public_key):
     #暗号文=平文**E mod N
     plain_integers = [ord(char) for char in plain_text]
     cipher_integers = [i ** E % N for i in plain_integers]
-    cipher_text = ''.join(chr(i) for i in cipher_integers)
+    cipher_text = ''.join(unichr(i) for i in cipher_integers)
 
     return cipher_text
 
