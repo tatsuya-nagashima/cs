@@ -35,10 +35,22 @@
 [カメラ映像](https://github.com/tatsuya-nagashima/cs/blob/master/image_prodessing/simpleCapture.py)  
 [カメラ映像での顔認識](https://github.com/tatsuya-nagashima/cs/blob/master/image_prodessing/faceCapture.py)
 
-参考文献  
-[ヒープソートの実装方法とアルゴリズム]  https://webbibouroku.com/Blog/Article/py-heapsort  
-[クイックソートの実装方法とアルゴリズム] https://webbibouroku.com/Blog/Article/py-quicksort  
-[ソートアルゴリズムと Python での実装] https://qiita.com/sue_charo/items/30f5d817da4c948c3be6  
 
-[Pythonで画像のピクセル操作] https://qiita.com/zaburo/items/0b9db87d0a52191b164b  
-[OpenCVを使ってカメラの映像を顔認識をしてみる] http://taizo.hatenablog.jp/entry/2016/06/28/072112  
+　  　  
+参考サイト   
+・ヒープソートの実装方法とアルゴリズム  https://webbibouroku.com/Blog/Article/py-heapsort  
+・クイックソートの実装方法とアルゴリズム https://webbibouroku.com/Blog/Article/py-quicksort  
+・ソートアルゴリズムと Python での実装 https://qiita.com/sue_charo/items/30f5d817da4c948c3be6  
+
+・Pythonで画像のピクセル操作 https://qiita.com/zaburo/items/0b9db87d0a52191b164b  
+・OpenCVを使ってカメラの映像を顔認識をしてみる http://taizo.hatenablog.jp/entry/2016/06/28/072112  
+
+・hashcat https://github.com/hashcat/hashcat  
+　  
+  
+参考文献(読んだ本)  
+・マスタリングTCP/IP 入門編 第5版   
+・ネットワークはなぜつながるのか 第2版 知っておきたいTCP/IP、LAN、光ファイバの基礎知識   
+・インフラ/ネットワークエンジニアのためのネットワーク技術&設計入門  
+・暗号技術入門 第3版 秘密の国のアリス   
+・Python機械学習プログラミング 達人データサイエンティストによる理論と実践  
